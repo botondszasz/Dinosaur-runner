@@ -1,0 +1,94 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#game-space{
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+#player{
+    width: 20px;
+    height: 50px;
+    background-color: blue;
+    position: relative;
+    top: 150px;
+}
+
+.player-animation{
+    animation: player-jump 500ms infinite linear;
+}
+
+#obstacle{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    position: relative;
+    top: 130px;
+    left: 580px;
+}
+
+.obstacle-animation{
+    animation: obstacle-moving 2s infinite linear;
+}
+
+@keyframes obstacle-moving{
+    0%{left: 580px;}
+    100%{left: -40px;}
+}
+
+@keyframes player-jump{
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+.container {
+    height: 100px;
+    width: 180px;
+    background-color: rgb(69, 173, 69);
+    border-radius: .5rem;
+    border: 2px solid black;
+
+    position: absolute;
+    top: 8%;
+    right: 30%;
+    transform: calc(50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.start-button, .play-again-button {
+    padding: 5px;
+    font-size: 16px;
+    font-family: "Gill Sans", sans-serif;
+    border-radius: .2rem;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+.start-button:hover, .play-again-button:hover{
+    background-color: grey;
+}
+
+.game-over-message {
+    position: absolute;
+    top: 15%;
+    font-size: 22px;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.play-again-button{
+    margin-top: 25px;
+    position: relative;
+}
+
+.game-over {
+    display: none;
+}
+
+
